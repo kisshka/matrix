@@ -20,7 +20,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
           name: ${{ matrix.configuration }}
-          path: dist/${{ matrix.configuration }}
+          path: dist
 
   test:
     needs: build
@@ -37,6 +37,6 @@ jobs:
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
-          name: ${{ matrix.configuration }}
-          path: dist/tests/${{ matrix.configuration }}
+          name: tests_${{ matrix.configuration }}
+          path: dist
 
