@@ -1,23 +1,39 @@
 
 name: Matrix Workflow
-
-on: [push]
+#для релиза
+on: [workflow_dispatch]
 jobs:
-  build:
+  build-release:
     runs-on: windows-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Build classlibrary
-      run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj
-    - name: Build App
-      run: dotnet build src/Matrix.App/Matrix.App.csproj
+    - name: Build classlibrary in Release
+      run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj --configuration Release
   
-  test:
-    needs: build
+  test-release:
+    needs: build-release
     runs-on: windows-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v4
-    - name: Run tests
-      run: dotnet test tests/tests.csproj
+    - name: Run tests for release build
+      run: dotnet test tests/tests.csproj --configuration Release
+
+#для отладки
+  build-debug:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Build classlibrary in Debug
+      run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj --configuration Debug
+  
+  test-debug:
+    needs: build-release
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run tests for debug build
+      run: dotnet test tests/tests.csproj --configuration Debug
