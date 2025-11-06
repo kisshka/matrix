@@ -1,0 +1,29 @@
+name: get-coverage
+
+on:  [workflow_dispatch]
+  # push:
+  #   branches:
+  #     - main
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Build classlibrary
+      run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj --configuration Release
+
+  test:
+    needs: build
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run tests for release with coverlet
+      run: dotnet test tests/tests.csproj --configuration Release --collect:"XPlat Code Coverage" --results-directory ./dist/
+        
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v4
+      with:
+          name: code-coverage
+          path: dist/**/coverage.cobertura.xml
