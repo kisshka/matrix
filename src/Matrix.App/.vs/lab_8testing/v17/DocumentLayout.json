@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D3DC270F-EA7B-4438-9B21-643111BF6102}|lab_8testing\\lab_8testing.csproj|d:\\\u0443\u0447\u0435\u0431\u0430\u0430\\\u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\lab_8testing\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{D3DC270F-EA7B-4438-9B21-643111BF6102}|lab_8testing\\lab_8testing.csproj|solutionrelative:lab_8testing\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\ClassLibrary1\\ClassLibrary1\\Matrix.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D3DC270F-EA7B-4438-9B21-643111BF6102}|lab_8testing\\lab_8testing.csproj|d:\\\u0443\u0447\u0435\u0431\u0430\u0430\\\u0442\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\lab_8testing\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D3DC270F-EA7B-4438-9B21-643111BF6102}|lab_8testing\\lab_8testing.csproj|solutionrelative:lab_8testing\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 327,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{02d1f8b9-d0a0-4ccb-9687-e6f0f781ad9e}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Matrix.cs",
+              "DocumentMoniker": "E:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\ClassLibrary1\\ClassLibrary1\\Matrix.cs",
+              "ToolTip": "E:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\ClassLibrary1\\ClassLibrary1\\Matrix.cs",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-10T05:37:03.801Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "D:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\lab_8testing\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "lab_8testing\\MainWindow.xaml",
+              "ToolTip": "D:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\lab_8testing\\MainWindow.xaml",
+              "RelativeToolTip": "lab_8testing\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-04-09T18:12:36.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "D:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\lab_8testing\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "lab_8testing\\MainWindow.xaml.cs",
+              "ToolTip": "D:\\\u0423\u0427\u0415\u0411\u0410\u0410\\\u0422\u0435\u0441\u0442\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435\\lab_8testing\\lab_8testing\\MainWindow.xaml.cs",
+              "RelativeToolTip": "lab_8testing\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAEoAAAAAAAAAAAAIwF0AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-09T18:12:32.907Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
