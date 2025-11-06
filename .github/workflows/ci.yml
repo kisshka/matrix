@@ -1,0 +1,23 @@
+
+name: Matrix Workflow
+
+on: [push]
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Build classlibrary
+      run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj
+    - name: Build App
+      run: dotnet build src/Matrix.App/Matrix.App.csproj
+  
+  test:
+    needs: build
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run tests
+      run: dotnet test tests/tests.csproj
