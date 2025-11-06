@@ -1,0 +1,42 @@
+
+name: Different configuration testing
+#для релиза
+on: [pull_request]
+jobs:
+  build:
+    runs-on: windows-latest
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Build classlibrary
+      run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj --configuration ${{ matrix.configuration }}
+    - name: Build application
+      run: dotnet build src/Matrix.App/Matrix.App.csproj --configuration ${{ matrix.configuration }}
+      
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v4
+      with:
+          name: ${{ matrix.configuration }}
+          path: dist/${{ matrix.configuration }}
+
+  test:
+    needs: build
+    strategy:
+      matrix:
+        configuration: [Debug, Release]
+    runs-on: windows-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Run tests for release build
+      run: dotnet test tests/tests.csproj --configuration ${{ matrix.configuration }}
+      
+    - name: Archive artifacts
+      uses: actions/upload-artifact@v4
+      with:
+          name: ${{ matrix.configuration }}
+          path: dist/tests/${{ matrix.configuration }}
+
