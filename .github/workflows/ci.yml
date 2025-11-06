@@ -30,7 +30,7 @@ jobs:
       run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj --configuration Debug
   
   test-debug:
-    needs: build-release
+    needs: build-debug
     runs-on: windows-latest
     steps:
     - name: Checkout code
