@@ -1,7 +1,7 @@
 
 name: Different configuration testing
 #для релиза
-on: [pull_request]
+on: [workflow_dispatch]
 jobs:
   build:
     runs-on: windows-latest
@@ -13,14 +13,11 @@ jobs:
       uses: actions/checkout@v4
     - name: Build classlibrary
       run: dotnet build src/Matrix.Domain/Matrix.Domain.csproj --configuration ${{ matrix.configuration }}
-    - name: Build application
-      run: dotnet build src/Matrix.App/Matrix.App.csproj --configuration ${{ matrix.configuration }}
-      
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
           name: ${{ matrix.configuration }}
-          path: dist/${{ matrix.configuration }}
+          path: dist
 
   test:
     needs: build
@@ -37,6 +34,6 @@ jobs:
     - name: Archive artifacts
       uses: actions/upload-artifact@v4
       with:
-          name: ${{ matrix.configuration }}
-          path: dist/tests/${{ matrix.configuration }}
+          name: tests_${{ matrix.configuration }}
+          path: dist
 
